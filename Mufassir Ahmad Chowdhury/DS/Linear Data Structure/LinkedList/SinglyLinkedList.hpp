@@ -44,8 +44,21 @@ class SinglyLinkedList{
         Node<data_type> *getHead() const;
         Node<data_type> *getTail() const;
 
+        data_type back() const;
+        data_type front() const;
 
         void push_back(data_type value);
+        void push_front(data_type value);
+        void insert(int index, data_type value);
+
+        void pop_back();
+        void pop_front();
+        void remove(int index);
+        void deleteNode(Node<data_type> *node);
+
+        void reverse(Node<data_type> *node = getHead());
+
+        void clear();
 
 };
 
@@ -59,5 +72,8 @@ std::ostream &operator<<(std::ostream &os, const SinglyLinkedList<data_type> &li
     return os;
 }
 
-#include "SinglyLinkedList.tpp"
 #include "Node.tpp"
+#include "SinglyLinkedList.Constructors and Destructors.tpp"
+#include "SinglyLinkedList.Insertion.tpp"
+#include "SinglyLinkedList.Deletion.tpp"
+#include "SinglyLinkedList.utility.tpp"
